@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>Hola mundo thymeleaf</h1>
+<h2 th:text="${key}"></h2>
+
+<p th:text="${key2}" ></p>
+
+<p th:text="${empleado.nombre}"></p>
+<p th:text="${empleado.apellido}"></p>
+<p th:text="${empleado.email}"></p>
+<p th:text="${empleado.telefono}"></p>
+
+
+<table>
+<tbody>
+   <tr th:each="verd: ${key3}">
+		<td th:text="${verd}"></td>
+	</tr>
+  </tbody>
+</table>
+
+<h1>Lista Empleados</h1>
+<table>
+<tbody>
+   <tr th:each="emp: ${lista}">
+		<td th:text="${emp.nombre}"></td>
+		<td th:text="${emp.apellido}"></td>
+		<td th:text="${emp.email}"></td>
+		<td th:text="${emp.telefono}"></td>
+	</tr>
+  </tbody>
+</table>
+  
+
+
+
+</body>
+</html>
