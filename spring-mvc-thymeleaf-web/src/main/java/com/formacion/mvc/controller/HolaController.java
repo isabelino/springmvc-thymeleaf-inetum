@@ -13,15 +13,9 @@ import com.formacion.mvc.service.EmpleadoService;
 @Controller
 public class HolaController {
 	
-	@Autowired
-	private EmpleadoService servicio;
+
 	
 	
-	@GetMapping("empleados")
-	public String index(Model modelo) {
-		modelo.addAttribute("empleados",servicio.listarEmpleados() );
-		return "empleado";
-	}
 	
 	@GetMapping("hola")
 	public String hola(Model modelo) {
